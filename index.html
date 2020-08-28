@@ -3,10 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Notes</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://kit.fontawesome.com/cc0e1098f1.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+
 </head>
 <body>
-  
+  <h1> <u>Notepad</u> <i class="far fa-sticky-note"></i> </h1>
+
+
+
+  <form>
+    <textarea name="formNoteText" id="formNoteText" cols="50" rows="8" maxlength="300"> </textarea>
+  </form>
+
+  <div>
+    <select name="formColor" id="formColor">
+      <option value="none">Select color</option>
+      <option value="pink">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+  </div>
+
+  <div>
+  <button id="formAddButton">Add Note <i class="far fa-edit"></i></button>
+  <button id="formDelButton">Delete Note <i class="far fa-trash-alt"></i></button>
+  </div>
+
+  <div id="notes"></div>
+
+<footer>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

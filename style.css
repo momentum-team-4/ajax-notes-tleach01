@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font: 1.8rem/1.56 sans-serif;
+    color: #000003;
+    margin: 0;
+    padding: 0 3.2rem 2.4rem;
+    background: #f5f5f5;
+  }
+  
+  textarea {
+    display: block;
+    border-radius: 0.4rem;
+  }
+  
+  textarea,
+  form select {
+    background: rgb(231, 244, 255);
+    border: 1px solid #0f3e69;
+    
+  }
+  
+  form select, 
+  form button {
+    display: inline-block;
+    margin: 2rem 1rem 0 0;
+    height: 3rem;
+  }
+  
+  #formAddButton {
+    background-color: #1f5696;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    
+  }
+  
+  #formAddButton:hover {
+    cursor: pointer;
+    background-color: #1096b8;
+  }
+  
+  #formDelButton {
+    background-color: #a31313;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    
+  }
+  
+  #formDelButton:hover {
+    cursor: pointer;
+    background-color: #f70707;
+  }
+  
+  #notes {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+  }
+  
+  .note {
+    width: 24rem;
+    height: 20rem;
+    font-size: 1.4rem;
+    background: #fff;
+    border-radius: 0.4rem;
+    padding: 1.2rem 1.6rem;
+    margin: 2.4rem 2.4rem 0 0;
+    box-shadow: 0 0.9rem 1.2rem rgba(0,0,0, 0.1);
+    position: relative;
+  }
+  
+  .note-text {
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .note span:hover {
+    color: rgb(5, 55, 78);
+    background: #e0e0e0;
+    cursor: pointer;
+  }
+
+  .note::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.8rem;
+    border-radius: 0 0 0.4rem 0.4rem;
+  }
+  
+  .note.pink::after {
+    background-color: rgb(235, 104, 104);
+  }
+  
+  .note.blue::after {
+    background-color: rgb(45, 175, 255);
+  }
+  .note.green::after {
+    background-color: rgb(131, 255, 131);
+  }
+  .note.yellow::after {
+    background-color: rgb(255, 229, 80);
+  }
