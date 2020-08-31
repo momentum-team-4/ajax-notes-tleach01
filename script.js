@@ -11,6 +11,7 @@ function addNote () {
   const text = noteText.value
   const note = document.createElement('div')
   const deleteButton = document.createElement('button')
+  const editButton = document.createElement('button')
 
   note.classList.add('note')
   note.classList.add(color.value)
@@ -20,6 +21,10 @@ function addNote () {
 
   note.appendChild(deleteButton)
   notes.appendChild(note)
+
+  editButton.innerHTML = 'Edit'
+  editButton.classList.add('editButton')
+  note.appendChild(editButton)
 
   noteText.value = ''
   noteText.focus()
@@ -54,7 +59,7 @@ async function loadNotes () {
 function postNote(note) {
   fetch('http://localhost:3000/notes/', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json'},
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(note)
   })
     .then(res => console.log(res))
@@ -67,6 +72,7 @@ function displayNote (pageNote) {
   const text = pageNote.body
   const note = document.createElement('div')
   const deleteButton = document.createElement('button')
+  const editButton = document.createElement('button')
 
   note.classList.add('note')
   note.classList.add(pageNote.color)
@@ -86,5 +92,15 @@ function displayNote (pageNote) {
     })
   })
 
-  
+  editButton.innerHTML = 'Edit'
+  editButton.classList.add('editButton')
+  note.appendChild(editButton)
+
+  editButton.addEventListener('click', function () {
+    fetch('http://localhost:3000/notes/' + pageNote.id, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(pageNote)
+    })
+  })
 }

@@ -2,23 +2,32 @@
     box-sizing: border-box;
   }
 
+  html{
+    font-size: 75%;
+  }
+
   body {
-    font: 1.5rem/1.5 sans-serif;
+    font: 1.5rem/1.5 'Indie Flower', cursive;
     color: #000000;
     margin: 0;
     padding: 0 3.2rem 2.4rem;
     background-color: rgb(218, 216, 216);
-}
+    background-image: url('wood and green.png');
+    background-size: cover;
+  }
+
 h1{
-    color: rgb(12, 12, 12);
-    font-family: 'Black Han Sans', sans-serif;;
+    color: rgb(255, 255, 255);
+    font-family: 'Handlee', cursive;
     font: 2.4rem;
 }  
 
   textarea {
     display: block;
-    border-radius: 0.4rem;
-    border-top: 10px;
+    border-radius: 0.6rem;
+    color: black;
+    font-family: 'Handlee', cursive;;
+    font-size: 1.8rem;
   }
   
   textarea,
@@ -35,25 +44,42 @@ h1{
   }
   
   #formAddButton {
-    background-color: #5382b8;
+    width: 7rem;
+    background-color: #5ba7ff;
     color: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 5px 5px;
+    font-family: 'Handlee', cursive;;
   }
   
   #formAddButton:hover{
-      background-color: rgb(32, 230, 236);
+      background-color: rgb(130, 251, 255);
+      cursor: pointer;
   }
   
   .delButton {
-    background-color: #921b1b;
+    background-color: #ec4c4c;
     color: rgb(255, 255, 255);
     border-radius: 3px;
     display: inline-block;
     width: 5rem ;
-    height: 1.6rem;
-    font-family: sans-serif;
+    height: 1.8rem;
+    font-family: 'Handlee', cursive;
   }
   .delButton:hover{
+      background-color: red;
+  }
+
+
+  .editButton {
+    background-color: #44689e;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    display: inline-block;
+    width: 5rem ;
+    height: 1.8rem;
+    font-family: 'Handlee', cursive;
+  }
+  .editButton:hover{
       background-color: red;
   }
 
@@ -61,19 +87,20 @@ h1{
     display: flex;
     flex-wrap: wrap;
     padding-top: 2rem;
+    font-family: 'Handlee', cursive;
   }
   
   .note {
     width: 24rem;
     height: 20rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     background: rgb(255, 252, 252);
     border-radius: 0.4rem;
     padding: 1rem 1.6rem;
     margin: 2.4rem 2.4rem 0 0;
     box-shadow: 0 1.2rem 1.2rem rgba(0,0,0, 0.1);
     position: relative;
-    font-family: 'Indie Flower', cursive;
+    font-family:'Handlee', cursive;
   }
   
   .note-text {
@@ -99,15 +126,15 @@ h1{
   }
   
   .note.pink::after {
-    background-color: rgb(235, 104, 104);
+    background-color: rgb(223, 82, 82);
   }
   
   .note.blue::after {
     background-color: rgb(45, 175, 255);
   }
   .note.green::after {
-    background-color: rgb(131, 255, 131);
+    background-color: rgb(9, 173, 9);
   }
   .note.yellow::after {
-    background-color: rgba(247, 243, 31, 0.938);
+    background-color: rgb(235, 219, 0);
   }
