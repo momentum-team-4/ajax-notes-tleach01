@@ -3,23 +3,28 @@
   }
 
   body {
-    font: 1.8rem/1.56 sans-serif;
-    color: #000003;
+    font: 1.5rem/1.5 sans-serif;
+    color: #000000;
     margin: 0;
     padding: 0 3.2rem 2.4rem;
-    background: #f5f5f5;
-  }
-  
+    background-color: rgb(218, 216, 216);
+}
+h1{
+    color: rgb(12, 12, 12);
+    font-family: 'Black Han Sans', sans-serif;;
+    font: 2.4rem;
+}  
+
   textarea {
     display: block;
     border-radius: 0.4rem;
+    border-top: 10px;
   }
   
   textarea,
   form select {
-    background: rgb(231, 244, 255);
-    border: 1px solid #0f3e69;
-    
+    background: rgb(255, 255, 255);
+    border: 1px solid #d8ecff;
   }
   
   form select, 
@@ -30,29 +35,28 @@
   }
   
   #formAddButton {
-    background-color: #1f5696;
+    background-color: #5382b8;
     color: rgb(255, 255, 255);
     border-radius: 5px;
-    
   }
   
-  #formAddButton:hover {
-    cursor: pointer;
-    background-color: #1096b8;
+  #formAddButton:hover{
+      background-color: rgb(32, 230, 236);
   }
   
-  #formDelButton {
-    background-color: #a31313;
+  .delButton {
+    background-color: #921b1b;
     color: rgb(255, 255, 255);
-    border-radius: 5px;
-    
+    border-radius: 3px;
+    display: inline-block;
+    width: 5rem ;
+    height: 1.6rem;
+    font-family: sans-serif;
   }
-  
-  #formDelButton:hover {
-    cursor: pointer;
-    background-color: #f70707;
+  .delButton:hover{
+      background-color: red;
   }
-  
+
   #notes {
     display: flex;
     flex-wrap: wrap;
@@ -63,12 +67,13 @@
     width: 24rem;
     height: 20rem;
     font-size: 1.4rem;
-    background: #fff;
+    background: rgb(255, 252, 252);
     border-radius: 0.4rem;
-    padding: 1.2rem 1.6rem;
+    padding: 1rem 1.6rem;
     margin: 2.4rem 2.4rem 0 0;
-    box-shadow: 0 0.9rem 1.2rem rgba(0,0,0, 0.1);
+    box-shadow: 0 1.2rem 1.2rem rgba(0,0,0, 0.1);
     position: relative;
+    font-family: 'Indie Flower', cursive;
   }
   
   .note-text {
@@ -77,7 +82,7 @@
   }
   
   .note span:hover {
-    color: rgb(5, 55, 78);
+    color: rgb(5, 137, 199);
     background: #e0e0e0;
     cursor: pointer;
   }
@@ -89,7 +94,8 @@
     left: 0;
     right: 0;
     height: 0.8rem;
-    border-radius: 0 0 0.4rem 0.4rem;
+    border-radius: 5px;
+    color: black;
   }
   
   .note.pink::after {
@@ -103,5 +109,5 @@
     background-color: rgb(131, 255, 131);
   }
   .note.yellow::after {
-    background-color: rgb(255, 229, 80);
+    background-color: rgba(247, 243, 31, 0.938);
   }
