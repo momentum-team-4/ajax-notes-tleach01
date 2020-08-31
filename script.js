@@ -35,9 +35,9 @@ addButton.addEventListener('click', function (event) {
   event.preventDefault()
   if (noteText.value !== '') {
     const body = {
-      id: numberOfNotes,
       title: '',
-      body: noteText.value
+      body: noteText.value,
+      color: color.value
     }
     addNote()
     console.log(body)
@@ -57,11 +57,11 @@ async function loadNotes () {
   }
 }
 
-async function postNote(note) {
-  await fetch('http://localhost:3000/notes/', {
+function postNote(note) {
+  fetch('http://localhost:3000/notes/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json'},
-    body: note
+    body: JSON.stringify(note)
   })
     .then(res => console.log(res))
 }
@@ -75,7 +75,7 @@ function displayNote (pageNote) {
   const deleteButton = document.createElement('button')
 
   note.classList.add('note')
-  note.classList.add(color.value)
+  note.classList.add(pageNote.color)
   note.innerHTML = `<i class="fas fa-thumbtack"></i> <div class='note-text'>${text} </div>`
   deleteButton.innerHTML = 'Delete'
   deleteButton.classList.add('delButton')
