@@ -18,12 +18,6 @@ function addNote () {
   deleteButton.innerHTML = 'Delete'
   deleteButton.classList.add('delButton')
 
-  // deleteButton.addEventListener('click', function () {
-  //   fetch('http://localhost:3000/notes/',{
-  //     method: 'DELETE'
-  //   })
-  // })
-
   note.appendChild(deleteButton)
   notes.appendChild(note)
 
@@ -85,4 +79,12 @@ function displayNote (pageNote) {
 
   noteText.value = ''
   noteText.focus()
+
+  deleteButton.addEventListener('click', function () {
+    fetch('http://localhost:3000/notes/' + pageNote.id, {
+      method: 'DELETE'
+    })
+  })
+
+  
 }
